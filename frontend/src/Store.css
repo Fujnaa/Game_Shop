@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Nunito:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --textColor: #bebebe;
+    --priceColor: rgb(1, 92, 1);
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+}
+
+ /*------------------------------*/
+/*H-O-R-I-Z-O-N-T-A-L--M-O-D-U-L-E*/
+ /*-----------------------------*/
+
+
+.horizontalModules {
+    margin-top: 100px;
+    
+    display: flex;
+    justify-content:center;
+
+    box-shadow: 0 0 10px 3px;
+}
+
+.horizontalRadioButton {
+    padding: 10px 50px 10px 50px;
+    border-radius: 0;
+
+}
+
+.searchContainer {
+    position: relative;
+
+}
+
+.searchBar {
+    padding: 9px 200px 10px 10px;
+}
+
+.searchIcon {
+    transform: scale(1.5, 1.5);
+
+    position: absolute;
+    right:2%;
+    bottom: 30%;
+}
+
+ /*--------------------------*/
+/*V-E-R-T-I-C-A-L--M-O-D-U-L-E*/
+ /*-------------------------*/
+
+.storeVerticalModules {
+    position: fixed;
+    margin: 20px 0 20px 0;
+    width: 230px;
+
+    display: flex;
+
+}
+
+.storeCheckBox {
+    margin: 20px 0 20px 20px;
+
+    color: var(--textColor);
+    font-size: 20px;
+}
+
+ /*--------------*/
+/*P-R-O-D-U-C-T-S-*/
+ /*--------------*/
+
+.storeProductsContainer {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin: 40px 0 0 280px;
+}
+
+.storeProduct {
+    width: 300px;
+    height: 300px;
+    
+    margin: 20px 20px 20px 20px;
+
+    position: relative;
+
+    overflow: hidden;
+    background-color: #313b4d;   
+    border: hidden;
+    border-radius: 5px;
+
+    box-shadow: 0 0 7px 3px;
+
+    transition: transform 80ms;
+}
+
+.storeProduct img {
+    margin: auto;
+    width: 100%;
+    height: 50%;
+}
+
+.storeProduct h1 {
+    font-size: 22px;
+
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+    text-align: center;
+    color: var(--textColor);
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.priceContainer h3 {
+    font-size: 33px;
+
+    padding: 3px;
+
+    color: var(--priceColor);
+    background-color: #1b212b;
+    border: hidden;
+    border-radius: 5px;
+}
+
+.priceContainer p {
+    color: var(--textColor);
+}
+
+.price p {
+    margin: -2px 10px 0 10px;
+}
+
+#originalPrice {
+    font-size: 20px;
+}
+
+#salePrice {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.storeProduct:hover {
+    transform: scale(1.01, 1.01);
+    box-shadow: 0 0 7px 4px;
+    cursor: pointer;
+}

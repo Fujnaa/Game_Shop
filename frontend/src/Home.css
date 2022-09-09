@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Nunito:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --textColor: #bebebe;
+    --priceColor: rgb(1, 92, 1);
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+}
+
+/*---------------------*/
+/*M-O-V-I-N-G-P-O-S-T-E-R*/
+ /*---------------------*/
+
+.firstSection {
+    margin-bottom:50px;
+    margin: 6rem auto 0 auto;
+}
+
+.movingPoster {
+    width: 1000px;
+    height: 370px;
+
+    margin: auto;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    box-shadow: 0 0 5px 3px;
+}
+
+.movingPoster-description {
+    display: inline-block;
+    width: 370px;
+    height: 65%;
+    margin-top: 65px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+}
+
+.movingPoster h3 {
+    font-size: 23px;
+    color: var(--textColor);
+    text-align: center;
+    margin-top: 35px;
+}
+
+.movingPoster-price {
+    font-size: larger;
+    color: rgb(1, 92, 1);
+    text-align: center;
+}
+
+.movingPoster-rating {
+    text-align: center;
+}
+
+.movingPoster-rating p {
+    color: #646464;
+    margin: auto 10px 20px 10px;
+    display: inline-block;
+}
+
+.movingPoster-categories {
+    display: flex;
+    justify-content: center;
+}
+
+.movingPoster-category {
+    padding: 7px;
+
+    display: inline-block;
+    text-align: center;
+    border-radius: 7px;
+
+    background-color: #646464;
+    border: solid black;
+}
+
+.movingPoster-category:hover {
+    background-color: #474747;
+}
+
+.movingPoster-category a{
+    margin: auto;
+
+    font-size: medium;
+    text-decoration: none;
+
+    color: black;
+}
+
+.movingPoster-carouselBox {
+    float: right;
+    margin-top: 35px;
+}
+
+.mainCarousel {
+    width: 600px;
+    height: 300px;
+
+}
+
+.mainCarousel-item::before {
+    content: '';
+    position: absolute;
+    top: 240px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+ /*--------------------------*/
+/*V-E-R-T-I-C-A-L--P-O-S-T-E-R*/
+ /*-------------------------*/
+
+.secondSection {
+    margin: 50px auto 50px auto;
+
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.secondSection-rentText {
+
+    color: var(--textColor);
+    font-size: 50px;
+
+    position: absolute;
+    left:15%;
+    top:30%;
+
+    font-weight: 600;
+}
+
+.horizontalPoster {
+
+    height: 200px;
+    width: 1000px;
+
+    position: relative;
+
+    margin: 5px 0 5px 0;
+    display: block;
+    transition: filter ease-in-out 100ms;
+ }
+
+ .horizontalPoster img {
+    width: 100%;
+    border: hidden;
+    border-radius: 7px;
+    z-index: 1;
+    box-shadow: 0 0 5px 3px;
+ }
+
+ .horizontalPoster:hover {
+    filter: brightness(80%);
+    transition: filter ease-in-out 200ms;
+
+ }
