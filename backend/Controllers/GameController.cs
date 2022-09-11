@@ -8,7 +8,6 @@ namespace game_shopV3.Controllers;
 
 [Controller]
 //[Route ("api/[controller]")]
-[EnableCors("MyAllowSpecificOrigins")]
 [Route ("api/games")]
 public class GameController : ControllerBase {
 

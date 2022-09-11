@@ -28,20 +28,21 @@ const Game2 = {
     SalePrice: 29.99,
     OnSale: true
 }
+//'/images/GodOfWarRagnarok.jpg'
+//"E:\\Projects\\WebProjekat\\game_shopV3\\frontend\\src\\images\\GodOfWarRagnarok.jpg"
 
 const StoreProduct = ({ product }) => {
     return (
         <div className='storeProduct'>
+            <img src={(product.path).slice(48)} alt={product.title}></img>
 
-            <img src='/images/GodOfWarRagnarok.jpg' alt={product.Title}></img>
-
-            <h1>{product.Title}</h1>
+            <h1>{product.title}</h1>
 
             <div className='priceContainer'>
-                {product.OnSale ? <h3>{((product.SalePrice + 0.01)/(product.Price + 0.01)) * 100}%</h3> : <></>}
+                {product.onSale ? <h3>{100 - ((((product.salePrice + 0.01)/(product.price + 0.01))).toFixed(2) * 100)}%</h3> : <></>}
                 <div className='price'>
-                    <p id='originalPrice'>{product.OnSale ? <s>{product.Price}</s> : product.Price}</p>
-                    {product.OnSale ? <p id='salePrice'>{product.SalePrice}</p> : <></>}
+                    <p id='originalPrice'>{product.onSale ? <s>{product.price}</s> : product.price}</p>
+                    {product.onSale ? <p id='salePrice'>{product.salePrice}</p> : <></>}
                 </div>
             </div>
 

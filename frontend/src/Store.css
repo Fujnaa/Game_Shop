@@ -3,6 +3,8 @@
 :root {
     --textColor: #bebebe;
     --priceColor: rgb(1, 92, 1);
+    --productColor: #313b4d;
+    --navColor: #001F2B;
 }
 
 body {
@@ -89,7 +91,7 @@ body {
     position: relative;
 
     overflow: hidden;
-    background-color: #313b4d;   
+    background-color: var(--productColor);
     border: hidden;
     border-radius: 5px;
 
@@ -153,3 +155,86 @@ body {
     box-shadow: 0 0 7px 4px;
     cursor: pointer;
 }
+
+ /*------------------------*/
+/*-A-D-M-I-N--B-U-T-T-O-N-S-*/
+ /*------------------------*/
+
+.gameOptions {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+}
+
+.gameOptions-button {
+
+    font-size: 20px;
+    margin: 5px;
+
+    color: var(--textColor);
+    background-color: #3a455a;
+    border: hidden;
+    border-radius: 5px;
+
+    box-shadow: rgb(34, 34, 34) 0 0 4px 0.5px;
+
+}
+
+.gameOptions-button:hover {
+    transform: scale(1.01, 1.01);
+    background-color: #2f3849;
+}
+
+ /*-----------------------*/
+/*-A-D-D--G-A-M-E--F-O-R-M-*/
+ /*----------------------*/
+
+.addGameForm {
+    position: absolute;
+    bottom: 50px;
+    left: 5px;
+
+    height: 600px;
+    width: 300px;
+
+    font-size: 17px;
+
+    background-color: #232b38;
+    color: var(--textColor);
+    border: hidden;
+    border-radius: 4px;
+    box-shadow: rgb(24, 24, 24) 0 0 7px 1px;
+}
+
+.addGameForm * {
+    display: block;
+}
+
+.addGameForm-input {
+    margin: 0.7em 0 0.9em 0.6em;
+    background-color: var(--productColor);
+}
+
+.addGameForm-label {
+    margin: 0.9em 0 0.7em 0.6em;
+}
+
+.addGameForm #saleCheckbox {
+    transform: scale(1.5);
+    margin-left: 0.8em;
+}
+
+.addGameForm #submitButton {
+    background-color: var(--productColor);
+    margin: 0.9em 0 0.7em 0.6em;
+}
+
+ /*------------------*/
+/*-S-T-O-R-E--C-A-R-T-*/
+ /*-----------------*/
+
+ .storeCart {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+ }
