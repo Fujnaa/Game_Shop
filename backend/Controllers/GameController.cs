@@ -19,13 +19,13 @@ public class GameController : ControllerBase {
 
     [HttpGet]
     public async Task<List<Game>> Get() {
-        return await _mongoDBService.GetAsync();
+        return await _mongoDBService.GetGamesAsync();
     }
 
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] Game game){
-        await _mongoDBService.CreateAsync(game);
-        return CreatedAtAction(nameof(Get), new { id = game.Id}, game);
+        await _mongoDBService.CreateGameAsync(game);
+        return CreatedAtAction(nameof(Get), new {id = game.Id}, game);
     }
 
     [HttpPut("{id}")]
@@ -42,7 +42,7 @@ public class GameController : ControllerBase {
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(string id){
-        await _mongoDBService.DeleteAsync(id);
+        await _mongoDBService.DeleteGameAsync(id);
         return NoContent();
     }
 }

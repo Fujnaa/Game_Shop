@@ -22,7 +22,7 @@ body {
     
     display: flex;
     justify-content:center;
-
+    
     box-shadow: 0 0 10px 3px;
 }
 
@@ -90,7 +90,6 @@ body {
 
     position: relative;
 
-    overflow: hidden;
     background-color: var(--productColor);
     border: hidden;
     border-radius: 5px;
@@ -156,6 +155,30 @@ body {
     cursor: pointer;
 }
 
+.deleteButton {
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+
+    transform: scale(1.5);
+}
+
+.deleteButton:hover {
+    color: #bebebe;
+}
+
+.editButton {
+    position: absolute;
+    left: 3.5em;
+    bottom: 1em;
+
+    transform: scale(1.5);
+}
+
+.editButton:hover {
+    color: #bebebe;
+}
+
  /*------------------------*/
 /*-A-D-M-I-N--B-U-T-T-O-N-S-*/
  /*------------------------*/
@@ -190,9 +213,9 @@ body {
  /*----------------------*/
 
 .addGameForm {
-    position: absolute;
-    bottom: 50px;
-    left: 5px;
+    position: fixed;
+    bottom: 65px;
+    left: 10px;
 
     height: 600px;
     width: 300px;
@@ -226,7 +249,73 @@ body {
 
 .addGameForm #submitButton {
     background-color: var(--productColor);
+    font-size: 1.2em;
+    margin: 1.2em 0 0.7em 0.6em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+
+    border-radius: 5px;
+}
+
+/*---------------------------*/
+/*-D-E-L-E-T-E--C-O-N-F-I-R-M-*/
+ /*-------------------------*/
+
+ .confirmDeleteContainer {
+    position: fixed;
+    left: 50%;
+    bottom: 50%;
+    width: 1000px;
+    height: 1000px;
+ }
+
+ /*-------------------------*/
+/*-E-D-I-T--G-A-M-E--F-O-R-M-*/
+ /*------------------------*/
+
+.editGameForm {
+
+    position: absolute;
+    left: -350px;
+    bottom: -50px;
+
+    height: 400px;
+    width: 300px;
+
+    font-size: 17px;
+
+    background-color: #232b38;
+    color: var(--textColor);
+    border: hidden;
+    border-radius: 4px;
+    box-shadow: rgb(24, 24, 24) 0 0 7px 1px;
+
+}
+
+.editGameForm * {
+    display: block;
+}
+
+.editGameForm-input {
+    margin: 0.7em 0 0.9em 0.6em;
+    background-color: var(--productColor);
+}
+
+.editGameForm-label {
     margin: 0.9em 0 0.7em 0.6em;
+}
+
+.editGameForm #saleCheckbox {
+    transform: scale(1.5);
+    margin-left: 0.8em;
+}
+
+.editGameForm #submitButton {
+    background-color: var(--productColor);
+    font-size: 1.2em;
+    margin: 1.2em 0 0.7em 0.6em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+
+    border-radius: 5px;
 }
 
  /*------------------*/
@@ -234,7 +323,64 @@ body {
  /*-----------------*/
 
  .storeCart {
+
+
+    display: block;
+
     position: fixed;
     right: 0;
     bottom: 0;
+
+    z-index: 3;
+    background-color: #001F2B;
+    color: var(--textColor);
+    border-radius: 5px;
+
+    box-shadow: rgb(24, 24, 24) 0 0 5px 3px;
  }
+
+.storeCart-product {
+    height: 100px;
+    width: 450px;
+
+    margin: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background-color: var(--productColor);
+    border: hidden;
+    border-radius: 5px;
+}
+
+.storeCart-product:hover {
+    background-color: #293141;
+    cursor: pointer;
+}
+
+.storeCart-image {
+    width: 100px;
+    overflow:hidden;
+
+    position: absolute;
+    left: 1em;
+
+    /*box-shadow: rgb(24, 24, 24) 0 0 5px 2px;*/
+
+    border: solid rgb(24, 24, 24) 2px;
+    border-radius: 3px;
+ }
+
+.storeCart-title {
+    font-size: 15px;
+
+    margin: 1em;
+}
+
+.storeCart-price {
+    position: absolute;
+    right: 1em;
+    bottom: 50%;
+}
