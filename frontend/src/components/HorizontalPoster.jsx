@@ -4,8 +4,7 @@ import React from 'react';
 const HorizontalPoster = () => {
     return (
         <div className='horizontalPoster'>
-            <h1 className='secondSection-rentText'>Looking For A Console To Rent?</h1>
-            <img src='/images/VerticalPoster/playstation5.jpg' alt='Sony Playstation 5'/>
+            <img src='/images/VerticalPoster/EldenRingVerticAL.jpg' alt='Sony Playstation 5'/>
         </div>
     );
 }

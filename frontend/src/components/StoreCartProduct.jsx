@@ -7,6 +7,7 @@ const StoreCartProduct = (props) => {
             <h3 className='storeCart-title'>{props.product.title}</h3>
             <div className='storeCart-priceContainer'>
                 {props.product.onSale ? <p className='storeCart-price'>{props.product.salePrice}</p> : <p className='storeCart-price'>{props.product.price}</p>}
+                <p className='storeCart-amount'>x{props.product.amount}</p>
             </div>
         </div>
     );

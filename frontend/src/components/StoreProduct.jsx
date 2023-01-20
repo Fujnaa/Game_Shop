@@ -1,16 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
-import api from '../api/games';
+import api from '../api/api';
 
 import { TrashFill } from 'react-bootstrap-icons';
 import { PencilSquare } from 'react-bootstrap-icons';
+import { useEffect } from 'react';
 
-const isAdmin = true;
 
 //'/images/GodOfWarRagnarok.jpg'
 //"E:\\Projects\\WebProjekat\\game_shopV3\\frontend\\src\\images\\GodOfWarRagnarok.jpg"
 
 const StoreProduct = (props) => {
+
+    var loggedUser = props.loggedUser;
+    var userToken = props.userToken;
 
     const [showEditGameForm, setShowEditGameForm] = useState(false);
 
@@ -30,8 +33,18 @@ const StoreProduct = (props) => {
 
     const gameDelete = async (id) => {
 
+        var response;
         try {
-            await api.delete(`games/${id}`);
+            console.log(id);
+            response = await api.delete(`games/${id}`, {
+                headers: {
+                    'Authorization': `bearer ${userToken}`
+                }
+            });
+
+            props.fetchProducts();
+
+
         } catch (error) {
             console.log(`Error: ${error.message}`)
         }
@@ -51,17 +64,21 @@ const StoreProduct = (props) => {
                 </div>
             </div>
 
-            {isAdmin ? (
+            {loggedUser.role === 'Admin' ? (
                 <>
-                    <TrashFill className='deleteButton' onClick={(e) => {
-                        if (window.confirm(`Are you sure you want to delete ${props.product.title}?`)) {
-                            gameDelete(props.product.id);
+                    <div className='deleteButton'>
+                        <TrashFill onClick={(e) => {
+                            if (window.confirm(`Are you sure you want to delete ${props.product.title}?`)) {
+                                gameDelete(props.product.id);
+                            }
                         }
-                    }
 
-                    } />
+                        } />
+                    </div>
+                    <div className='editButton'>
+                        < PencilSquare onClick={setForm} />
 
-                    < PencilSquare className='editButton' onClick={setForm} />
+                    </div>
                 </>
             ) : (
                 <></>

@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Store from "./components/Pages/Store";
 import Rent from "./components/Pages/Rent";
@@ -7,23 +8,27 @@ import NavBar from './components/NavBar';
 import './App.css';
 
 
-export default class App extends Component {
+const App = () => {
 
-  static displayName = App.name;
+  const[loggedUser, setLoggedUser] = useState({name:"", email:"", path:"", role:"Regular"});
 
-  render() {
+  const[userToken, setUserToken] = useState("");
+
     return (
+      <>
       <div className='App'>
 
-        <NavBar />
+        <NavBar setLoggedUser={setLoggedUser} setUserToken={setUserToken}/>
       
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/store" element={<Store />} />
+          <Route path="/" element={<Home loggedUser={loggedUser} />} />
+          <Route path="/store" element={<Store loggedUser={loggedUser} userToken={userToken}/>} />
           <Route path="/rent" element={<Rent />} />
         </Routes>
 
       </div>
+      </>
     );
-  }
 }
+export default App;
+

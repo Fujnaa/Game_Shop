@@ -12,28 +12,40 @@ body {
     font-weight: 500;
 }
 
+
  /*------------------------------*/
 /*H-O-R-I-Z-O-N-T-A-L--M-O-D-U-L-E*/
  /*-----------------------------*/
 
 
 .horizontalModules {
-    margin-top: 100px;
+    margin-top: 65px;
     
     display: flex;
-    justify-content:center;
-    
+    justify-content: flex-start;
+    flex-direction: row;
+    background-color: var(--productColor);
+
     box-shadow: 0 0 10px 3px;
 }
 
 .horizontalRadioButton {
     padding: 10px 50px 10px 50px;
+    border: none;
     border-radius: 0;
+    background-color: transparent;
+    margin-left: 20em;
+}
 
+.horizontalRadioButton:hover {
+    background-color: #001F2B;
 }
 
 .searchContainer {
     position: relative;
+    border: hidden;
+    border-radius: 10px;
+    margin: auto;
 
 }
 
@@ -47,6 +59,12 @@ body {
     position: absolute;
     right:2%;
     bottom: 30%;
+
+    cursor: pointer;
+}
+
+.searchIcon:hover {
+    transform: scale(1.7);
 }
 
  /*--------------------------*/
@@ -55,15 +73,18 @@ body {
 
 .storeVerticalModules {
     position: fixed;
-    margin: 20px 0 20px 0;
+    margin: 40px 0 20px 0;
     width: 230px;
+    height: 100%;
 
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
 .storeCheckBox {
-    margin: 20px 0 20px 20px;
+    margin: 1.5em 0 1em 1em;
 
     color: var(--textColor);
     font-size: 20px;
@@ -159,7 +180,7 @@ body {
     position: absolute;
     left: 1em;
     bottom: 1em;
-
+    z-index: 3;
     transform: scale(1.5);
 }
 
@@ -171,7 +192,7 @@ body {
     position: absolute;
     left: 3.5em;
     bottom: 1em;
-
+    z-index: 3;
     transform: scale(1.5);
 }
 
@@ -377,10 +398,47 @@ body {
     font-size: 15px;
 
     margin: 1em;
+    margin-left: 5em;
 }
 
 .storeCart-price {
     position: absolute;
     right: 1em;
     bottom: 50%;
+}
+
+.storeCart-amount {
+    text-align: right;
+}
+
+.storeCart-bottomModules {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: right;
+    height: 100px;
+    border-top: solid #8f8e8e;
+    border-radius: 3px;
+
+}
+
+.storeCart-bottomPriceText {
+    font-size: 20px;
+    color: var(--textColor);
+    margin: 2em 1em 1em 12em;
+}
+
+.storeCart-bottomPrice {
+    color: var(--priceColor);
+}
+
+.storeCart-bottomButton {
+    padding: 0.5em 0.8em 0.5em 0.8em;
+    margin: 1em;
+
+    justify-content: flex-start;
+    background-color: var(--productColor);
+    color:#dbdbdb;
+    border: hidden;
+    border-radius: 3px;
 }

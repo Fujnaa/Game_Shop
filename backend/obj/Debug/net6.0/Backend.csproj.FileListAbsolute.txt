@@ -46,3 +46,10 @@ E:\Projects\WebProjekat\game_shopV3\backend\bin\Debug\net6.0\Microsoft.IdentityM
 E:\Projects\WebProjekat\game_shopV3\backend\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 E:\Projects\WebProjekat\game_shopV3\backend\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 E:\Projects\WebProjekat\game_shopV3\backend\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Projects\WebProjekat\game_shopV3\backend\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Projects\WebProjekat\game_shopV3\backend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+E:\Projects\WebProjekat\game_shopV3\backend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Projects\WebProjekat\game_shopV3\backend\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+E:\Projects\WebProjekat\game_shopV3\backend\bin\Debug\net6.0\Scrutor.dll
+E:\Projects\WebProjekat\game_shopV3\backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+E:\Projects\WebProjekat\game_shopV3\backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

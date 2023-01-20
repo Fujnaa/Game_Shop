@@ -15,7 +15,7 @@ const checkBoxes = [
     { name: 'Strategy', value: '9' }
 ]
 
-const StoreVerticalModules = () => {
+const StoreVerticalModules = (props) => {
 
     //var activeCategories = [];
 
@@ -37,7 +37,9 @@ const StoreVerticalModules = () => {
                     className='storeCheckBox'
                     label={checkBox.name}
                     value={checkBox.name}
-                    onChange={(e) => setCategory(e.currentTarget.value)}
+                    onChange={(e) => props.setSearchCategory([
+                        ...document.querySelectorAll('[type="checkbox"]:checked')
+                      ].map(el => el.value))}
                 />
             ))}
             </Form>
